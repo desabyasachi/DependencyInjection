@@ -6,7 +6,12 @@ namespace DependencyInjection
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Service sObj = new Service();
+
+            //passing dependency
+            DIClass d = new DIClass(sObj);
+            d.PrintMethod();
+            Console.ReadKey();
         }
     }
 }
